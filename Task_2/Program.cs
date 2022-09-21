@@ -32,7 +32,9 @@ void PrintArray(int[,] array)
 void FindElementInArray(int[,] array, int stringNum, int columnNum)
 {
     if (columnNum - 1 > array.GetLength(0) 
-        || stringNum - 1 > array.GetLength(1))
+        || stringNum - 1 > array.GetLength(1)
+        || columnNum < 1
+        || stringNum < 1)
     {
         Console.WriteLine($"Значение элемента [{stringNum}, {columnNum}] не существует.");
     }
